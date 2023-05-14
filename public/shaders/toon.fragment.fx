@@ -11,6 +11,11 @@ uniform sampler2D image;
 out vec4 FragColor;
 
 void main() {
-    // Color
-    FragColor = texture(image, model_uv);
+vec4 color = texture(image, model_uv);
+
+float r = round(color.r * 4.0) / 4.0;
+float g = round(color.g * 4.0) / 4.0;
+float b = round(color.b * 4.0) / 4.0;
+
+FragColor = vec4(r, g, b, color.a);
 }

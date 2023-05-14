@@ -1,6 +1,5 @@
 #version 300 es
 precision highp float;
-
 // Attributes
 in vec3 position;
 in vec2 uv;
